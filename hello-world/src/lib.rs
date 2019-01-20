@@ -8,5 +8,7 @@ extern "C" {
 
 #[wasm_bindgen]
 pub fn greet(name: &str) {
-    alert(&format!("Hello, {}!", name));
+    let mut hello = "Hello, ".to_string();
+    hello.push_str(name);
+    alert(&hello);
 }
